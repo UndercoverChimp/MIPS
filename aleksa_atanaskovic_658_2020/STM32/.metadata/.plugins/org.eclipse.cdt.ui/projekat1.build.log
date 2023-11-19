@@ -1,0 +1,22 @@
+20:39:22 **** Incremental Build of configuration Debug for project projekat1 ****
+make -j12 all 
+arm-none-eabi-gcc -o "projekat1.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\AlEkSa\STM32CubeIDE\workspace_1.13.2\projekat1\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projekat1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projekat1.elf
+ 
+arm-none-eabi-size   projekat1.elf 
+arm-none-eabi-objdump -h -S  projekat1.elf  > "projekat1.list"
+arm-none-eabi-objcopy  -O ihex  projekat1.elf  "projekat1.hex"
+arm-none-eabi-objcopy  -O binary  projekat1.elf  "projekat1.bin"
+   text	   data	    bss	    dec	    hex	filename
+   4628	     20	   1572	   6220	   184c	projekat1.elf
+Finished building: default.size.stdout
+ 
+Finished building: projekat1.list
+ 
+Finished building: projekat1.bin
+Finished building: projekat1.hex
+ 
+ 
+
+20:39:22 Build Finished. 0 errors, 0 warnings. (took 469ms)
+
